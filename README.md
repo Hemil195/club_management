@@ -21,7 +21,6 @@ This table stores user authentication information.
 | email     | varchar(255) | NO   |     | NULL    |                |
 | password  | varchar(255) | NO   |     | NULL    |                |
 
-![Users Table Structure](images/users_table.png)
 
 ### Feedback Table
 This table stores messages submitted through the contact form.
@@ -34,7 +33,6 @@ This table stores messages submitted through the contact form.
 | message      | text         | NO   |     | NULL              |                |
 | submitted_at | timestamp    | NO   |     | current_timestamp |                |
 
-![Feedback Table Structure](images/feedback_table.png)
 
 ## Project Structure
 ```
@@ -182,4 +180,8 @@ club_management/
 5. Email notifications for events
 
 ## Credits
-Developed as a club management solution for university students to easily discover and engage with various campus clubs and activities. 
+Developed as a club management solution for university students to easily discover and engage with various campus clubs and activities.
+
+### Contributors
+- Harsh Pipaliya
+- Mitanshu Sailor 
