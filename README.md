@@ -1,8 +1,5 @@
 # Club Management System
 
-## Short Description
-The Club Management System is a web application that provides a platform for students to discover and engage with campus clubs. It features a user authentication system, interactive club directories, and a contact form for inquiries. Built with PHP, MySQL, HTML, CSS, and JavaScript, this system makes it easy for students to explore club activities, while allowing club administrators to showcase their events and connect with potential members.
-
 ## Project Overview
 The Club Management System is a web-based application designed to manage university clubs and activities. The system allows users to browse different clubs, view club details, contact administrators, and participate in club events.
 
