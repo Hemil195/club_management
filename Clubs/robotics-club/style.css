@@ -1,0 +1,667 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background: radial-gradient(rgb(0, 109, 128), rgb(0, 0, 0)); /* Blue/teal gradient for tech theme */
+    color: white;
+}
+
+.opacity {
+    height: 100%;
+    position: relative;
+}
+
+.header {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    z-index: 100;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: #fff;
+    text-shadow: 0 0 42px rgb(180, 206, 255), 0 0 151px rgb(255, 255, 255);
+}
+
+.header-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+}
+
+.header a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #4dabf7;
+}
+
+.toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+}
+
+.dropdown_menu.open {
+    height: auto;
+    padding: 1rem 0;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.dropdown_menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dropdown_menu a:hover {
+    color: #4dabf7;
+}
+
+/* Club Info Section */
+.club-info {
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.gear-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.gear {
+    position: absolute;
+    font-size: 150px;
+    animation: spin 20s linear infinite;
+    color: #4dabf7;
+}
+
+.gear1 {
+    top: 10%;
+    left: 10%;
+    animation-duration: 20s;
+}
+
+.gear2 {
+    top: 60%;
+    right: 15%;
+    animation-duration: 15s;
+    animation-direction: reverse;
+}
+
+.gear3 {
+    bottom: 20%;
+    left: 30%;
+    font-size: 100px;
+    animation-duration: 25s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.club-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.club-details {
+    width: 100%;
+    max-width: 800px;
+}
+
+.club-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    transition: text-shadow 0.3s ease;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.club-name:hover {
+    text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px rgb(77, 171, 247), 0 0 40px rgb(255, 255, 255);
+}
+
+.club-tagline {
+    font-size: 1.2rem;
+    color: #e6e6e6;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Club Details Section */
+.club-details-section {
+    padding: 3rem 2rem;
+}
+
+.details-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    color: #4dabf7;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.details-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.details-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #4dabf7;
+}
+
+.details-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 2px 20px rgba(77, 171, 247, 0.2);
+}
+
+.details-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #eaeaea;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.details-card i {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #4dabf7;
+    transition: color 0.3s;
+}
+
+/* Join Club Button */
+.join-club {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.join-club-btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(77, 171, 247, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.join-club-btn:hover {
+    background-color: #0a6ebd;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(77, 171, 247, 0.4);
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin: 30px 0;
+    padding: 2rem;
+}
+
+.social-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    color: #4dabf7;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    background-color: rgba(77, 171, 247, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    background-color: #4dabf7;
+}
+
+/* About Us Section */
+.about-us {
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(77, 171, 247, 0.1);
+    border: 1px solid rgba(77, 171, 247, 0.3);
+}
+
+.about-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #4dabf7;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #eaeaea;
+    text-align: left;
+}
+
+.about-description p {
+    margin-bottom: 20px;
+}
+
+/* Technologies Section */
+.technologies {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(77, 171, 247, 0.1);
+    border: 1px solid rgba(77, 171, 247, 0.3);
+}
+
+.technologies-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #4dabf7;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.technology-card {
+    background-color: rgba(10, 30, 50, 0.8);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.technology-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(77, 171, 247, 0.2);
+}
+
+.technology-icon {
+    background-color: #0a1929;
+    color: #4dabf7;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+}
+
+.technology-card h4 {
+    font-size: 1.3rem;
+    color: #4dabf7;
+    margin-bottom: 15px;
+}
+
+.technology-card p {
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(77, 171, 247, 0.1);
+    border: 1px solid rgba(77, 171, 247, 0.3);
+}
+
+.projects-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #4dabf7;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.project-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.project-item {
+    display: flex;
+    background-color: rgba(10, 30, 50, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(77, 171, 247, 0.2);
+}
+
+.project-status {
+    background-color: #0a1929;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    justify-content: center;
+}
+
+.status {
+    background-color: #4dabf7;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.project-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #4dabf7;
+}
+
+.project-team {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+/* Competitions Section */
+.competitions {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #0a1929 0%, #193e6c 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 60px;
+}
+
+.competitions-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.competitions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.competition-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.competition-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.competition-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #4dabf7;
+}
+
+.competition-date {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.competition-date i {
+    margin-right: 5px;
+}
+
+.competition-card p {
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .technologies-grid,
+    .competitions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .project-item {
+        flex-direction: column;
+    }
+    
+    .project-status {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .details-card {
+        width: 100%;
+    }
+    
+    .technologies-grid,
+    .competitions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .technology-card,
+    .competition-card {
+        margin-bottom: 20px;
+    }
+    
+    .about-us, .technologies, .projects, .competitions {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    
+    .links {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .club-name {
+        font-size: 2.5rem;
+    }
+    
+    .social-icons {
+        flex-wrap: wrap;
+    }
+    
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+} 

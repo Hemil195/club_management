@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens Masters Photography Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3cJWzjQzQYIKBgG2Wj8dQmUG5z9WsN4C4ZxqH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="opacity">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="inner-header">
+                <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Clubs
+                    Management System</h1>
+                <div class="header-right">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../clubs.html">Clubs</a>
+                    <a href="../../contact.html">Contact Us</a>
+                    <a href="../../auth/logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Club Name and Logo Section -->
+        <div class="club-info">
+            <img src="../../assets/images/photography club.png" alt="Photography Club Logo"
+                class="club-logo">
+            <h2 class="club-name">Lens Masters Photography Club</h2>
+        </div>
+
+        <!-- Club Details Section -->
+        <div class="club-details">
+            <h3 class="details-heading">Club Details</h3>
+            <div class="details-cards">
+                <!-- Card 1: Faculty and Coordinator -->
+                <div class="details-card">
+                    <p><i class="fas fa-user-tie"></i> Faculty Team Member : Prof. Sanjay Kumar</p>
+                    <p style="text-indent: 224px;"></i>: Prof. Priya Sharma</p>
+                </div>
+
+                <!-- Card 2: Contact Information -->
+                <div class="details-card">
+                    <p><i class="fas fa-user-graduate"></i> Student Coordinator : Kiara Advani (21CS034)</p>
+                    <p><i class="fas fa-envelope"></i> Email ID: lensmasters@university.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Club Button -->
+        <div class="join-club">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5Ye62xkryBK_W1eBvNs30ZAZq0oKjDL4JqD6RGViw79n8CQ/viewform"><button class="join-club-btn">Join Club</button></a>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social-media">
+            <h3 class="social-heading">Connect With Us</h3>
+            <div class="social-icons">
+                <a href="https://wa.me/919876543210" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/lensmasters.photography.charusat" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:lensmasters@university.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Image Slider Section -->
+        <div class="image-slider">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="../../assets/images/photography club.png"
+                        alt="Slider Image 1">
+                    <div class="slide-text">
+                        <div class="overlay"></div>
+                        <h3>Capture the World Through Your Lens!</h3>
+                        <p>Join our creative photography community.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://img.freepik.com/free-photo/medium-shot-woman-taking-photos_23-2150316541.jpg"
+                        alt="Slider Image 2">
+                    <div class="slide-text">
+                        <div class="overlay"></div>
+                        <h3>Every Picture Tells a Story!</h3>
+                        <p>Learn the art of visual storytelling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="about-us">
+            <h3 class="about-heading">About Us</h3>
+            <p class="about-description">
+                Lens Masters Photography Club is a passionate community dedicated to the art and craft of photography. We bring together students with an eye for beauty and a desire to capture the world around them through their camera lenses.
+                <br><br>
+                Our club focuses on various aspects of photography including landscape, portrait, street, macro, and wildlife photography. We explore techniques for composition, lighting, editing, and storytelling through images. Our members range from beginners with smartphone cameras to advanced photographers with professional equipment.
+                <br><br>
+                Throughout the academic year, we organize photo walks, workshops, editing sessions, guest lectures from professional photographers, and exhibitions to showcase members' work. We also participate in photography competitions and collaborative projects with other campus clubs.
+                <br><br>
+                Join us to develop your photography skills, share your creative vision, and connect with fellow photography enthusiasts in a supportive and inspiring environment!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for automatic image slider
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex); // Initial call to display the first slide
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+
+</html> 

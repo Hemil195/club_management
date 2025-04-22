@@ -1,0 +1,259 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    z-index: 100;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: #fff;
+    text-shadow: 0 0 42px rgb(180, 206, 255), 0 0 151px rgb(255, 255, 255);
+}
+
+.header a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header .logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* Opacity Layer for Background */
+.opacity {
+    background-color: black;
+    background-blend-mode: overlay;
+}
+
+/* Background Image Holder */
+.back-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.charusat.ac.in/assets/images/home/s9.webp) no-repeat center center/cover;
+    background-color: rgba(23, 17, 1, 0.686);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+/* Work Area */
+.work-area {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-area-medium {
+    background-color: #aed2e7;
+    width: clamp(300px, 1150px, 90%);
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 160px 10px rgba(0, 0, 0, 0.5);
+}
+
+.head-image {
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.mini-form {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+    width: clamp(280px, 80%, 90%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0px 0px 56px -19px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #284b63;
+    text-align: center;
+}
+
+/* Input Fields */
+.control-container {
+    width: clamp(250px, 85%, 300px);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content 40px max-content;
+    gap: 0px;
+    position: relative;  /* Add this to make the eye icon position correctly */
+}
+
+label {
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #284b63;
+    box-sizing: border-box;
+    padding: 7px;
+    width: 100%;
+    padding-right: 40px; /* Add space for the eye icon */
+}
+
+/* Button Styling */
+.button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-secondary {
+    background-color: #4CAF50;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+/* Eye Icon for Password */
+.eye {
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #284b63;
+}
+
+/* Error Message Styling */
+#error-message {
+    color: red;
+}
+
+.pills {
+    display: none;
+    color: red;
+}
+
+.pills.active {
+    display: block;
+}
+
+/* Clubs Section */
+.clubs-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.club-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.club-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.club-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.club-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .club-cards {
+        flex-direction: column;
+    }
+
+    .club-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

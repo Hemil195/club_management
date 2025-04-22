@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+.header {
+    background-color: transparent;
+    color: white;
+    padding: 2px;
+    text-align: right;
+    position: relative;
+    z-index: 100;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+
+
+    color: #fff;
+    text-shadow:
+        /* 0 0 7px #fff, */
+        /* 0 0 10px #fff, */
+        /* 0 0 21px #aeddff, */
+        0 0 42px rgb(180, 206, 255),
+        0 0 151px rgb(255, 255, 255);
+} 
+
+.header a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 25px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-right: 110px;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header .logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* Opacity Layer for Background */
+.opacity {
+    background-color: black;
+    background-blend-mode: overlay;
+}
+
+/* Background Image Holder */
+.back-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.charusat.ac.in/assets/images/home/s9.webp) no-repeat center center/cover;
+    background-color: rgba(23, 17, 1, 0.686);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+/* Work Area */
+.work-area {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-area-medium {
+    background-color: #aed2e7;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 15px 160px 10px rgba(0, 0, 0, 0.5);
+}
+
+.head-image {
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.mini-form {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+    width: clamp(280px, 80%, 90%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0px 0px 56px -19px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #284b63;
+    text-align: center;
+}
+
+/* Input Fields */
+.control-container {
+    width: clamp(250px, 85%, 300px);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content 40px max-content;
+    gap: 0px;
+}
+
+label {
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 0;
+}
+
+input[type='text'], 
+input[type='email'], 
+textarea {
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #284b63;
+    box-sizing: border-box;
+    padding: 7px;
+    width: 100%;
+    resize: none;
+}
+
+textarea {
+    height: auto;
+}
+
+/* Button Styling */
+.button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.message-box p {
+    font-size: 16px;
+    color: #333;
+}
+
+.message-box p.success {
+    color: green;
+}
+
+.message-box p.error {
+    color: red;
+}

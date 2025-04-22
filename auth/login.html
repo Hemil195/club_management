@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="inner-header">
+            <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Clubs Management System</h1>
+        </div>
+    </div>
+
+    <div class="opacity">
+        <div class="back-holder"></div>
+    </div>
+
+    <div class="work-area">
+        <div class="content-area-medium">
+            <div class="head-image">
+                <img src="https://admission.charusat.ac.in/View%20Assets/images/University%20Logo.jpg" alt="University Logo">
+            </div>
+            <div class="mini-form">
+                <form method="post" id="form" action="login.php">
+                    <div class="title">
+                        <span>LOGIN</span>
+                    </div>
+                    <div class="control-container">
+                        <label for="txtEmail" id="lblEmail">Enter Email*</label>
+                        <input name="txtEmail" type="email" id="txtEmail">
+                        <div class="pills">
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="control-container">
+                        <label for="txtPassword">Password*</label>
+                        <input name="txtPassword" type="password" id="txtPassword">
+                        <span class="eye" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <div class="pills">
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <button type="button" class="button" id="btnGetOtp">Login</button>
+                    <br>
+                    <span>Don't have an account?</span>
+                    <div class="button button-secondary" id="btnLogin">Sign Up</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/login.js"></script>
+</body>
+
+</html>

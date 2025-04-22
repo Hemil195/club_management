@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangmanch Drama Club</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your CSS file -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&family=Roboto:wght@900&display=swap"
+        rel="stylesheet"> <!-- Google Fonts -->
+    <!-- Include Font Awesome from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3cJWzjQzQYIKBgG2Wj8dQmUG5z9WsN4C4ZxqH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="opacity">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="inner-header">
+                <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Clubs
+                    Management System</h1>
+                <div class="header-right">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../clubs.html">Clubs</a>
+                    <a href="../../contact.html">Contact Us</a>
+                    <a href="../../auth/logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Club Name and Logo Section -->
+        <div class="club-info">
+            <img src="../../assets/images/drama club.jpg" alt="Drama Club Logo"
+                class="club-logo">
+            <h2 class="club-name">Rangmanch Drama Club</h2>
+        </div>
+
+        <!-- Club Details Section -->
+        <div class="club-details">
+            <h3 class="details-heading">Club Details</h3>
+            <div class="details-cards">
+                <!-- Card 1: Faculty and Coordinator -->
+                <div class="details-card">
+                    <p><i class="fas fa-user-tie "></i> Faculty Team Member : Prof. Vikram Singh</p>
+                    <p style="text-indent: 224px;"></i>: Prof. Meera Kapoor</p>
+                </div>
+
+                <!-- Card 2: Contact Information -->
+                <div class="details-card">
+                    <p><i class="fas fa-user-graduate"></i> Student Coordinator : Arjun Mehta (20CS089)</p>
+                    <p><i class="fas fa-envelope"></i> Email ID: rangmanch@university.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Club Button -->
+        <div class="join-club">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5Ye62xkryBK_W1eBvNs30ZAZq0oKjDL4JqD6RGViw79n8CQ/viewform"><button class="join-club-btn">Join Club</button></a>
+        </div>
+
+        <!-- New Social Media Section -->
+        <div class="social-media">
+            <h3 class="social-heading">Connect With Us</h3>
+            <div class="social-icons">
+                <a href="https://wa.me/919765432109" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/rangmanch.drama.charusat" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:rangmanch@university.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Image Slider Section -->
+        <div class="image-slider">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="../../assets/images/drama club.jpg"
+                        alt="Slider Image 1">
+                    <div class="slide-text">
+                        <div class="overlay"></div> <!-- Overlay for better text readability -->
+                        <h3>Discover the Actor Within!</h3>
+                        <p>Join our passionate drama community.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://img.freepik.com/premium-photo/group-actors-performing-stage-theater-performance_274234-1746.jpg"
+                        alt="Slider Image 2">
+                    <div class="slide-text">
+                        <div class="overlay"></div> <!-- Overlay for better text readability -->
+                        <h3>All the world's a stage!</h3>
+                        <p>Experience the magic of Indian theater traditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New About Us Section -->
+        <div class="about-us">
+            <h3 class="about-heading">About Us</h3>
+            <p class="about-description">
+                Rangmanch Drama Club is dedicated to the celebration and preservation of India's rich dramatic traditions, while exploring contemporary theater forms. Our name "Rangmanch" comes from the Hindi word for "stage" or "theater," representing our commitment to the art of storytelling through performance.
+                <br><br>
+                We explore various theatrical styles including traditional Indian forms like Nautanki, Jatra, and Kathakali, as well as modern plays and experimental theater. Our members develop skills in acting, script writing, direction, set design, costume creation, and technical production.
+                <br><br>
+                Throughout the year, we organize workshops with professional theater artists, conduct acting exercises, and produce several performances. Our major annual production showcases the collective talents of our members and draws audiences from across campus and the local community.
+                <br><br>
+                Join us to discover your creative potential, build confidence, and be part of a supportive artistic community that brings stories to life on stage!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for automatic image slider
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex); // Initial call to display the first slide
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+
+</html> 

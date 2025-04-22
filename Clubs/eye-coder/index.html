@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Details</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your CSS file -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&family=Roboto:wght@900&display=swap"
+        rel="stylesheet"> <!-- Google Fonts -->
+    <!-- Include Font Awesome from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3cJWzjQzQYIKBgG2Wj8dQmUG5z9WsN4C4ZxqH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="opacity">
+        <!-- Header Section -->
+        <div class="header">
+            <!-- <img src="https://www.charusat.ac.in/cspit/images/cspitlogo.webp" alt="Logo" class="logo"> -->
+            <div class="inner-header">
+                <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Clubs
+                    Managment System</h1>
+                <div class="header-right">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../clubs.html">Clubs</a>
+                    <a href="../../contact.html">Contact Us</a>
+                    <a href="../../auth/logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Club Name and Logo Section -->
+        <div class="club-info">
+            <img src="images/logo.png" alt="Club Logo"
+                class="club-logo">
+            <!-- Replace 'club-logo.png' with your actual image path -->
+            <h2 class="club-name">Eye Coder Club</h2>
+        </div>
+
+        <!-- Club Details Section -->
+        <div class="club-details">
+            <h3 class="details-heading">Club Details</h3>
+            <div class="details-cards">
+                <!-- Card 1: Faculty and Coordinator -->
+                <div class="details-card">
+                    <p><i class="fas fa-user-tie "></i> Faculty Team Member : Prof. Hemang Thakar</p>
+                    <p style="text-indent: 224px;"></i>: Prof. Dharmendrasinh Rathod</p>
+                    
+                </div>
+
+                <!-- Card 2: Contact Information -->
+                <div class="details-card">
+                    <p><i class="fas fa-user-graduate"></i> Student Coordinator : Jayraj Lakkad</p>
+                    <p><i class="fas fa-envelope"></i> Email ID: eyecoderclub@university.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Club Button -->
+        <div class="join-club">
+            <a href="https://eyecodersclub.github.io/join_club.html"><button class="join-club-btn">Join Club</button></a>
+        </div>
+
+        <!-- New Social Media Section -->
+        <div class="social-media">
+            <h3 class="social-heading">Connect With Us</h3>
+            <div class="social-icons">
+                <a href="https://wa.me/919510048718" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/eye.coders.club.charusat?igsh=NGVoNmsyYXMydnYx" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:eyecoderclub@university.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Image Slider Section -->
+        <div class="image-slider">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/event2.png"
+                        alt="Slider Image 1">
+                    <div class="slide-text">
+                        <div class="overlay"></div> <!-- Overlay for better text readability -->
+                        <h3>Join Us in Celebrating Art!</h3>
+                        <p>Be a part of our vibrant community.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/8.png"
+                        alt="Slider Image 2">
+                    <div class="slide-text">
+                        <div class="overlay"></div> <!-- Overlay for better text readability -->
+                        <h3>Collaborate and Create!</h3>
+                        <p>Join hands with fellow art lovers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New About Us Section -->
+        <div class="about-us">
+            <h3 class="about-heading">About Us</h3>
+            <p class="about-description">
+                An EYE CODERS Club is typically a student-led or community-based organization focused on promoting coding, programming, and technology skills among its members. The name EYE CODERS might symbolize a focus on visual learning, creative coding, or simply an acronym that stands for something specific to the group.
+
+The EYE CODERS Club would serve as a hub for learning, collaboration, and innovation, helping members develop their coding skills, connect with like-minded individuals, and prepare for future opportunities in the tech industry.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for automatic image slider
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex); // Initial call to display the first slide
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="assets/css/contact.css"> <!-- Link to your contact page CSS -->
+</head>
+<body>
+    <div class="header">
+        <!-- <img src="https://www.charusat.ac.in/cspit/images/cspitlogo.webp" alt="Logo" class="logo"> -->
+        <div class="inner-header">
+            <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Clubs
+                Management System</h1>
+            <div class="header-right">
+                <a href="index.html">Home</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="auth/logout.php">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="opacity">
+        <div class="back-holder"></div> <!-- Background Image Holder -->
+    </div>
+
+    <div class="work-area">
+        <div class="content-area-medium">
+            <div class="head-image">
+                <img src="https://admission.charusat.ac.in/View%20Assets/images/University%20Logo.jpg" alt="University Logo">
+            </div>
+            <div class="mini-form">
+                <!-- Form with direct submission to PHP, no JavaScript interference -->
+                <form method="post" action="api/contact.php">
+                    <div class="title">
+                        <span>Contact Us</span>
+                    </div>
+                    <div class="control-container">
+                        <label for="name">Your Name*</label>
+                        <input name="name" type="text" id="name" required>
+                    </div>
+                    <div class="control-container">
+                        <label for="message">Your Message*</label>
+                        <textarea name="message" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Remove the JavaScript dependency for form submission -->
+</body>
+</html>

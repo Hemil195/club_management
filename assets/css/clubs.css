@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.opacity {
+    background-color: black;
+    background-blend-mode: overlay; /* Overlay blend mode for the dark layer */
+}
+
+.back-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(https://www.charusat.ac.in/assets/images/home/slider1111.webp) no-repeat center center/cover;
+    background-color: rgba(23, 17, 1, 0.686); /* Add a background color that blends with the image */
+    background-blend-mode:multiply; /* Apply hard-light blending mode */
+    z-index: -1;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #fff;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.clubs-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.club-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centers the cards */
+    gap: 20px; /* Adds consistent space between cards */
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+.club-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Fixed width for consistency */
+    height: 250px; /* Fixed height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.club-card {
+    margin: 15px 30px; /* 15px for top/bottom, 10px for left/right */
+}
+#link {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Sets font color to black */
+}
+
+#link:hover {
+    color: black; /* Ensures font color stays black on hover */
+}   
+
+.club-card img {
+    width: 100px;  /* Fixed width for logos */
+    height: 100px; /* Fixed height for logos */
+    border-radius: 50%; /* Circular shape */
+    margin-bottom: 10px; /* Space between logo and text */
+}
+
+
+.club-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .club-cards {
+        flex-direction: column;
+    }
+
+    .club-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+.header {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    z-index: 100;
+}
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: #fff;
+    text-shadow: 0 0 42px rgb(180, 206, 255), 0 0 151px rgb(255, 255, 255);
+}
+
+.header a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header .logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
