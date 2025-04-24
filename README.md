@@ -150,7 +150,7 @@ club_management/
 ## Usage
 
 1. **Accessing the System**:
-   - Open your web browser and navigate to [http://localhost/club_management](http://localhost/club_management)
+   - Open your web browser and navigate to [http://localhost/club_management](http://localhost/club_management/auth/login.html)
 
 2. **User Registration**:
    - Click on the Login link
