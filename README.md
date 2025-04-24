@@ -6,16 +6,16 @@ The Club Management System is a web-based application designed to manage univers
 ## Application Screenshots
 
 ### Homepage
-![Homepage](images/homepage.png)
+![Homepage](Images/homepage.png)
 
 ### Clubs Listing
-![Clubs Listing](images/clubpage.png)
+![Clubs Listing](Images/clubpage.png)
 
 ### Club Details
-![Club Details](images/club_details.png)
+![Club Details](Images/club_details.png)
 
 ### Contact Page
-![Contact Page](images/contactus_page.png)
+![Contact Page](Images/contactus_page.png)
 
 ## Features
 - **User Authentication**: Secure login and signup functionality
