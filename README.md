@@ -3,6 +3,20 @@
 ## Project Overview
 The Club Management System is a web-based application designed to manage university clubs and activities. The system allows users to browse different clubs, view club details, contact administrators, and participate in club events.
 
+## Application Screenshots
+
+### Homepage
+![Homepage](images/homepage.png)
+
+### Clubs Listing
+![Clubs Listing](images/clubpage.png)
+
+### Club Details
+![Club Details](images/club_details.png)
+
+### Contact Page
+![Contact Page](images/contactus_page.png)
+
 ## Features
 - **User Authentication**: Secure login and signup functionality
 - **Club Directory**: Browse through various clubs with detailed information
@@ -21,6 +35,7 @@ This table stores user authentication information.
 | email     | varchar(255) | NO   |     | NULL    |                |
 | password  | varchar(255) | NO   |     | NULL    |                |
 
+![Users Table Structure](images/users_table.png)
 
 ### Feedback Table
 This table stores messages submitted through the contact form.
@@ -33,6 +48,7 @@ This table stores messages submitted through the contact form.
 | message      | text         | NO   |     | NULL              |                |
 | submitted_at | timestamp    | NO   |     | current_timestamp |                |
 
+![Feedback Table Structure](images/feedback_table.png)
 
 ## Project Structure
 ```
